@@ -15,6 +15,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   image,
   className = "",
 }) => {
+  
   return (
     <div
       className={`relative overflow-hidden rounded-lg group cursor-pointer ${className}`}
@@ -48,82 +49,37 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 };
 
 const EcommerceHomepage: React.FC = () => {
+//   const navLinks = [
+//   { label: "HOME", href: "/" },
+//   { label: "SHOP", href: "/category" },
+//   { label: "CONTACT US", href: "/contact-us" },
+// ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
-        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> */}
-        {/* <div className="flex items-center justify-between h-16"> */}
-        {/* Logo */}
-        {/* <div className="flex-shrink-0">
-              <div className="w-24 h-8 bg-gray-300 rounded"></div>
-            </div> */}
-
-        {/* Search Bar */}
-        {/* <div className="flex-1 max-w-lg mx-8">
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Search className="h-5 w-5 text-gray-400" />
-                </div>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg leading-5 bg-gray-100 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-            </div> */}
-
-        {/* Right Side */}
-        {/* <div className="flex items-center space-x-4"> */}
-        {/* Country Selector */}
-        {/* <div className="flex items-center space-x-1 bg-black text-white px-3 py-1 rounded text-sm">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span>NGN</span>
-              </div> */}
-
-        {/* Shopping Bag */}
-        {/* <div className="relative">
-                <ShoppingBag className="h-6 w-6 text-gray-700" />
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  3
-                </span>
-              </div> */}
-
-        {/* User Avatar */}
-        {/* <div className="w-8 h-8 bg-gray-300 rounded-full"></div> */}
-        {/* </div> */}
-        {/* </div> */}
-        {/* </div> */}
-
-        {/* Navigation */}
+      {/* <header className="bg-white shadow-sm">
+        
+        
         <nav className="border-b border-gray-200">
           <div className="px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-center max-md:hidden items-center space-x-8">
-              {[
-                "NEW ARRIVAL",
-                // "MOST PICKED",
-                "SHOP",
-                // 'WOMEN',
-                // 'MEN',
-                // 'SNEAKERS',
-                "GADGETS",
-                "APPLIANCES",
-                "CONTACT US",
-              ].map((item) => (
-                <a
-                  key={item}
-                  href={`${
-                    item === "CONTACT US" ? "/contact-us" : "/category"
-                  }`}
-                  className="py-4 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap text-sm font-medium transition-colors duration-200"
-                >
-                  {item}
-                </a>
-              ))}
+            <div className="flex justify-center items-center space-x-8 max-md:hidden py-2">
+              <ul className="flex space-x-8">
+                {navLinks.map(({ label, href }) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      className="py-2 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-400 whitespace-nowrap text-sm font-medium transition-colors duration-200"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </nav>
-      </header>
+      </header> */}
 
       {/* Main Content */}
       <main className="max-md:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

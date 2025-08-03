@@ -22,9 +22,9 @@ const MainCategoryContent = () => {
 			)}
 
 			{Categories && (
-				<div className=''>
-					<h4 className='text-2xl mb-4 font-medium'>All Categories</h4>
-					<div className='grid grid-cols-4 gap-5'>
+				<div className='mb-8'>
+					<h4 className='text-2xl lg:text-4xl mb-4 font-medium'>All Categories</h4>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
 						{Categories?.map((data) => (
 							<SubCategoryCard
 								key={data.id}

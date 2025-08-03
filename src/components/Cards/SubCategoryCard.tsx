@@ -1,48 +1,54 @@
 "use client";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../config/store";
-import Picture from "../picture/Picture";
 import Link from "next/link";
-import { convertToSlug } from "@constants";
 import { useAppSelector } from "../hooks";
+import Picture from "../picture/Picture";
+import { convertToSlug } from "@constants";
 
 interface SubCategoryCardProps {
 	id?: string;
 	image?: string;
 	name: string;
 }
+
 const SubCategoryCard = ({ id, image, name }: SubCategoryCardProps) => {
-	const { data } = useAppSelector((state) => state.subCategoryId);
+	const { data: selectedId } = useAppSelector((state) => state.subCategoryId);
+	const slug = `/category/${convertToSlug(name)}-${id}`;
+
+	const isSelected = selectedId === id;
+	const hasImage = !!image;
 
 	return (
 		<Link
-			href={`${"/category/" + convertToSlug(name) + "-" + id}`}
-			className={`flex flex-col gap-2 items-center group w-fit cursor-pointer rounded-sm bg-white border-[2px] border-transparent hover:border-primary/50 transition shrink-0 ${
-				data === id ? "border-[2px]" : ""
+			href={slug}
+			className={`flex flex-col items-center group w-fit cursor-pointer rounded-md shrink-0 transition-transform hover:scale-105 ${
+				isSelected ? "border-2 border-primary" : ""
 			}`}
 		>
-			<div className='flex flex-wrap px-8 pt-2'>
-				{image ? (
+			<div className="px-8 pt-2">
+				{hasImage ? (
 					<Picture
-						src={image || "/images/home-img-1.png"}
-						alt={`category-img-${name}`}
-						className='w-[300px] h-[200px] object-contain object-center bg-[#111111] group-hover:scale-105 transition-[.4]'
+						src={image!}
+						alt={`Image for ${name}`}
+						className="w-[300px] h-[200px] object-contain object-center bg-primary group-hover:scale-105 transition-transform duration-300 rounded"
 					/>
 				) : (
-					<div className='w-[300px] h-[200px] object-contain object-center bg-[#111111] transition-[.4] grid place-items-center'>
+					<div className="w-[300px] h-[200px] bg-primary grid place-items-center rounded">
 						<h4
 							dangerouslySetInnerHTML={{ __html: name }}
-							className='text-white font-semibold leading-[1.5rem] pb-2 text-center'
+							className="text-white font-semibold text-xl text-center line-clamp-1 px-2"
 						/>
 					</div>
 				)}
-			</div>
 
-			<h4
-				dangerouslySetInnerHTML={{ __html: name }}
-				className='text-primaryColor-100 font-semibold leading-[1.5rem] pb-2 text-center'
-			/>
+				{/* Show name below image for both cases */}
+				{hasImage && (
+					<h4
+						dangerouslySetInnerHTML={{ __html: name }}
+						className="text-primary font-semibold text-center leading-6 pb-2"
+					/>
+				)}
+			</div>
 		</Link>
 	);
 };

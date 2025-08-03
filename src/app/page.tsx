@@ -23,9 +23,9 @@ const page = () => {
   return (
     <AppLayout className="pt-10 mx-auto mt-10">
       <EcommerceHomepage />
-      <div className="mx-4">
+      <div className=" max-md:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AllCategorySection />
-        <div className="mt-4 sm:mt-10">
+        <div className="mt-4 sm:mt-10 pt-12 pb-8">
           <SortedProducts />
         </div>
       </div>

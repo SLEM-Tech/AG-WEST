@@ -177,14 +177,15 @@ const SortedProducts = () => {
 							>
 								<div
 									ref={sliderRef}
-									className='flex space-x-6 overflow-x-auto scroll-smooth overflow-y-hidden no-scrollbar'
+									className='flex py-6 space-x-6 overflow-x-auto scroll-smooth overflow-y-hidden no-scrollbar'
 								>
 									{isLoading ? (
 										<Loader /> // Show loader when data is being fetched
 									) : (
 										<>
-											{categoryProductsMap[category?.id]?.map(
-												(product: ProductType) => (
+											{categoryProductsMap[category?.id]?.slice(0, 7).map(
+												(product: ProductType) => {
+													return (
 													<ProductCard2
 														key={product?.id}
 														id={product?.id}
@@ -192,8 +193,10 @@ const SortedProducts = () => {
 														oldAmount={product?.regular_price}
 														newAmount={product?.price}
 														description={product?.name}
+														boxShadow={true}
 													/>
-												),
+												)
+												},
 											)}
 										</>
 									)}

@@ -8,6 +8,7 @@ import { RiShoppingBagFill } from "react-icons/ri";
 import Picture from "../picture/Picture";
 import Link from "next/link";
 import { convertToSlug } from "@constants";
+import { PlusCircle } from "lucide-react";
 
 interface ProductCard2Props {
 	id: string | number;
@@ -90,8 +91,8 @@ const ProductCard2 = ({
 
 	return (
 		<div
-			className={`flex flex-col gap-2 justify-center items-center min-w-[150px] md:min-w-[180px] slg:min-w-[180px] slg:max-w-[180px] h-[200px] sm:h-[230px] slg:h-[260px] cursor-pointer rounded-sm ${
-				boxShadow ? "shadow-lg bg-white" : "border-[1px] border-[#bfbfbf4f]"
+			className={`flex flex-col gap-2 py-1 rounded-xl justify-center items-center min-w-[150px] md:min-w-[250px] slg:min-w-[250px] slg:max-w-[250px] h-[200px] sm:h-[230px] slg:h-[260px] cursor-pointer ${
+				boxShadow ? " bg-white" : "border-[1px] border-[#bfbfbf4f]"
 			} hover:shadow-lg hover:scale-105 transition`}
 		>
 			<div className='flex-[.8] w-full relative flex items-center justify-center overflow-hidden rounded-t-sm'>
@@ -99,26 +100,37 @@ const ProductCard2 = ({
 					<Picture
 						src={image || ""}
 						alt={`${description}-image`}
-						className='absolute top-0 object-contain object-center h-full w-full'
+						className='absolute top-0 object-cover object-center h-full w-full rounded-md'
 						loading='eager'
 					/>
 				</Link>
 			</div>
 			<div className='flex-[.2] flex w-full flex-col px-2 pb-1'>
+				<Link
+					href={`/home-item/product/${slugDesc}-${id}`}
+					dangerouslySetInnerHTML={{ __html: description }}
+					className='line-clamp-1 text-xs sm:text-sm text-text_color font-semibold leading-[1.3] w-[12rem]'
+				/>
 				<div className='flex items-center justify-between'>
 					<h4 className='text-xs sm:text-base text-primary font-[400] leading-[1.8]'>
 						{NewAmount ? <FormatMoney2 value={NewAmount} /> : "Out of Stock"}
 					</h4>
+
 					<div
-						className={`flex items-center gap-1 rounded-md text-white p-1 text-xs sm:text-sm transition ${
+						className={`flex items-center gap-3 rounded-full text-white px-2 py-1 text-xs sm:text-sm transition ${
 							cartItemCount !== 0 && "bg-primary"
 						}`}
 					>
 						{cartItemCount === 0 ? (
-							<RiShoppingBagFill
-								className='fill-primary text-2xl'
+							<button
 								onClick={handleCartClick}
-							/>
+								className={`flex items-center gap-1 px-2 py-1 text-white text-xs font-medium rounded-full transition ${
+									cartItemCount ? "bg-white" : "bg-primary"
+								}`}
+							>
+								<PlusCircle className="w-4 h-4 mr-3" />
+								<span>Buy</span>
+							</button>
 						) : (
 							<>
 								<AiOutlineMinus onClick={handleMinusCartClick} />
@@ -129,11 +141,6 @@ const ProductCard2 = ({
 					</div>
 				</div>
 
-				<Link
-					href={`/home-item/product/${slugDesc}-${id}`}
-					dangerouslySetInnerHTML={{ __html: description }}
-					className='line-clamp-2 text-xs sm:text-sm text-text_color font-semibold leading-[1.3] w-[8rem]'
-				/>
 			</div>
 		</div>
 	);

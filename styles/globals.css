@@ -35,10 +35,18 @@
 	}
 }
 
+@font-face {
+  font-family: 'Athletics';
+  src: url('/fonts/Athletics-Regular.otf') format('opentype');
+  font-weight: 500;
+  font-display: swap;
+}
+
 /* paginationStyles.css */
 
 body {
 	position: relative;
+	/* font-family: 'Athletics', sans-serif; */
 }
 .pagination {
 	display: flex;

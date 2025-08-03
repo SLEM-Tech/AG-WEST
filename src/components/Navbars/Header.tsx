@@ -203,6 +203,12 @@ const Header = () => {
     }
   };
 
+  const navLinks = [
+  { label: "HOME", href: "/" },
+  { label: "SHOP", href: "/category" },
+  { label: "CONTACT US", href: "/contact-us" },
+];
+
   return (
     <>
       <header
@@ -546,7 +552,31 @@ const Header = () => {
         ) : (
           <HomePageBottomHeader />
         )} */}
+
+        <div className="bg-white border-t border-gray-200 w-full mt-4 hidden lg:block">
+        {/* Navigation */}  
+        <nav className="">
+          <div className="px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-center items-center space-x-8 max-md:hidden py-2">
+              <ul className="flex space-x-8">
+                {navLinks.map(({ label, href }) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      className="py-2 px-2 text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm font-medium transition-colors duration-200"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
       </header>
+
 
       <Modal
         backdrop="opaque"

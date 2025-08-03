@@ -10,6 +10,7 @@ export const theme = {
 	extend: {
 		fontFamily: {
 			poppins: ["var(--font-poppins)", "sans-serif"],
+			athletics: ['Athletics', 'sans-serif'],
 		},
 		colors: {
 			light: "#F3F3F3",
@@ -18,7 +19,7 @@ export const theme = {
 				100: "#FDF7FD",
 				200: "#CCCCCC",
 			},
-			primary: "#FFA500",
+			primary: "#141414",
 			effect: "#E2C8C4",
 			primaryColor: {
 				100: "#9BCB14",

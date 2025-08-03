@@ -253,7 +253,7 @@ const AllCategorySection = () => {
             </div>
           </section>
 
-          <p className="text-3xl pb-6">BROWSE CATEGORIES</p>
+          <p className="text-4xl pb-6">BROWSE CATEGORIES</p>
 
           <div
             className="flex items-center justify-center w-full gap-3 sm:gap-6 overflow-x-auto scroll-smooth overflow-y-hidden no-scrollbar max-md:pl-[280px]"
