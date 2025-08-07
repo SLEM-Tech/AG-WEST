@@ -57,7 +57,7 @@ const Header = () => {
   const [selectedCurrency, setSelectedCurrency] = useState(baseCurrency.code);
   const { data: customer, isLoading, isError } = useCustomer("");
   const wc_customer2_info: Woo_Customer_Type[] = customer;
-  const wc_customer_info: Woo_Customer_Type | undefined =
+  let wc_customer_info: Woo_Customer_Type | undefined =
     filterCustomersByEmail(wc_customer2_info, email);
 
   const calculateSubtotal = () => {

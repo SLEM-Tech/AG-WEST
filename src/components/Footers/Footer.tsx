@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import * as Iconbi from "react-icons/bi";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import FooterCard from "../Cards/FooterCard";
 import Link from "next/link";
 import { ChatServiceIconSvg, FileIconSvg, RocketIconSvg } from "../SvgIcons";
@@ -10,7 +10,7 @@ import { signOut } from "@utils/lib";
 import { CompanyName, filterCustomersByEmail } from "@constants";
 import { useCustomer } from "../lib/woocommerce";
 import { LogoImage } from "@utils/function";
-import { Dribbble, Facebook, Github, Linkedin, Twitter } from "lucide-react";
+// import { Dribbble, Facebook, Github, Linkedin, Twitter } from "lucide-react";
 
 interface footerDataProps {
   title: string;
@@ -221,12 +221,12 @@ const Footer = () => {
         </section>
       </div>
 
-      <div className="w-full border-t border-gray-500 mx-auto max-w-[1300px] max-md:px-6">
-        <div className="flex items-center justify-between py-2 max-md:flex-col max-md:gap-3">
+      <div className="w-full mx-auto max-w-[1300px] max-md:px-6">
+        <div className="flex items-center justify-center py-2 max-md:flex-col max-md:gap-3">
           <div className="text-black text-[8px] sm:text-[10px] slg:text-xs font-[400] leading-[1.2]">
             Copyright&nbsp;@ {currentYear}&nbsp;{CompanyName} Alright Reserved.
           </div>
-          <div className="flex items-center space-x-4">
+          {/* <div className="flex items-center space-x-4">
             <Link
               href="#"
               className="text-black hover:text-gray-600 transition-colors duration-200"
@@ -257,7 +257,7 @@ const Footer = () => {
             >
               <Dribbble className="w-5 h-5" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
