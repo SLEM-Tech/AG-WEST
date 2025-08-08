@@ -349,9 +349,9 @@ const Page = () => {
               <li>
                 <span className='font-medium'>4. Business Process Solution Refunds</span>
                 <ul className='list-disc pl-5 mt-1 space-y-1'>
-                  <li>Consulting refunds if analysis doesn't provide actionable business insights</li>
-                  <li>Implementation refunds for solutions that don't improve business processes</li>
-                  <li>ROI guarantee refunds if promised business improvements aren't achieved</li>
+                  <li>Consulting refunds if analysis doesn&apos;t provide actionable business insights</li>
+                  <li>Implementation refunds for solutions that don&apos;t improve business processes</li>
+                  <li>ROI guarantee refunds if promised business improvements aren&apos;t achieved</li>
                   <li>Integration failure refunds for systems that cannot be successfully connected</li>
                   <li>Training program refunds if staff cannot effectively use implemented solutions</li>
                 </ul>
