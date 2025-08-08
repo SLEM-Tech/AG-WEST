@@ -100,7 +100,7 @@ const Page = () => {
                 <span className='font-medium'>Business Process Solutions:</span> We analyze and optimize business processes through technology integration, workflow automation, and digital transformation initiatives. Our solutions streamline operations, improve efficiency, and enhance customer engagement across various industries.
               </li>
               <li>
-                <span className='font-medium'>Manufacturers' Representative Services:</span> As authorized representatives for technology manufacturers, we provide product sourcing, technical support, warranty services, and local distribution channels. All represented products meet quality standards and include full manufacturer backing.
+                <span className='font-medium'>Manufacturers&apos; Representative Services:</span> As authorized representatives for technology manufacturers, we provide product sourcing, technical support, warranty services, and local distribution channels. All represented products meet quality standards and include full manufacturer backing.
               </li>
               <li>
                 <span className='font-medium'>Digital Equipment Distribution:</span> Our distribution network includes computers, mobile devices, audio equipment, video production tools, and specialized digital equipment. We maintain inventory, provide technical specifications, and offer bulk purchasing options for businesses.
@@ -179,7 +179,7 @@ const Page = () => {
             </h4>
             
             <p className='mt-2 leading-[1.8] text-xs md:text-sm xl:text-base'>
-              As manufacturers' representatives, we share necessary information with partners for product support, warranty services, and distribution optimization. All sharing is governed by strict confidentiality agreements. Custom application data remains confidential and is never shared without explicit client consent. Content creator partnerships include privacy protection requirements.
+              As manufacturers&apos; representatives, we share necessary information with partners for product support, warranty services, and distribution optimization. All sharing is governed by strict confidentiality agreements. Custom application data remains confidential and is never shared without explicit client consent. Content creator partnerships include privacy protection requirements.
             </p>
 
             <h4 className='text-sm sm:text-base lg:text-lg font-medium mt-4'>
