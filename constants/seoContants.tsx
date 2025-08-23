@@ -1,7 +1,7 @@
-const websiteUrl = "https://www.duply.com.ng/";
+const websiteUrl = "https://www.agwestmulti.com/";
 export const websiteName = "AG West";
 export const SEODATA = {
-	defaultOGImage: `https://www.duply.com.ng/_next/static/media/duply-logo.6c861d97.png`,
+	defaultOGImage: `https://www.agwestmulti.com/_next/static/media/duply-logo.6c861d97.png`,
 	default: {
 		title: websiteName,
 		description: `This is ${websiteName}`,
