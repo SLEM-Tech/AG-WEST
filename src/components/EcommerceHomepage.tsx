@@ -86,17 +86,17 @@ const EcommerceHomepage: React.FC = () => {
         <div className="flex max-md:flex-col lg:grid-cols-2 gap-6 h-auto lg:h-[600px]">
           {/* Winter Arrival - Large Card */}
           <CategoryCard
-            title="Winter Arrival"
-            subtitle="Of Outfit"
-            image="/images/Winter.png"
+            title="Monitor Health."
+            subtitle="Live Better."
+            image="/images/Winter.jpg"
             className="w-2/3 max-md:w-full lg:row-span-2"
           />
 
           {/* Top Cosmetics */}
           <CategoryCard
-            title="Top"
-            subtitle="Cosmetics"
-            image="/images/Cosmetics.png"
+            title="Your Health,"
+            subtitle="Precisely Measured."
+            image="/images/Cosmetics.jpg"
             className="w-1/3 max-md:w-full"
           />
         </div>
@@ -104,17 +104,17 @@ const EcommerceHomepage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
           {/* Gadgets On The Go */}
           <CategoryCard
-            title="Gadgets"
-            subtitle="On The Go"
-            image="/images/Gadgets.png"
+            title="Smart Scales,"
+            subtitle="Healthier You."
+            image="/images/Gadgets.jpg"
             className="h-[300px]"
           />
 
           {/* Sport Footwear */}
           <CategoryCard
-            title="Sport"
-            subtitle="Footwear"
-            image="/images/Sport.png"
+            title="Track Vitals."
+            subtitle="Stay Healthy."
+            image="/images/Sport.jpg"
             className="h-[300px]"
           />
         </div>
